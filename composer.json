@@ -23,8 +23,8 @@
 				"name": "adrian0350/php-ami",
 				"version": "1.0.0",
 				"source": {
-					"url": "https://github.com/Adrian0350/PHP-AMI",
-					"type": "git" 
+					"url": "https://github.com/Adrian0350/PHP-AMI/tree/1.0.0",
+					"type": "git"
 				}
 			}
 		}
