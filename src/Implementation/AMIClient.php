@@ -30,15 +30,15 @@
 
 declare(ticks=1);
 
-require_once dirname(__FILE__) . '/../PAMI/Message/Message.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/OutgoingMessage.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/IncomingMessage.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Action/LoginAction.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Response/ResponseMessage.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/Factory/Impl/EventFactoryImpl.php';
-require_once dirname(__FILE__) . '/../PAMI/Listener/IEventListener.php';
-require_once dirname(__FILE__) . '/../PAMI/Client/Exception/ClientException.php';
-require_once dirname(__FILE__) . '/../PAMI/Client/IClient.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Message.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/OutgoingMessage.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/IncomingMessage.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Action/LoginAction.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Response/ResponseMessage.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/Factory/Impl/EventFactoryImpl.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Listener/IEventListener.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Client/Exception/ClientException.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Client/IClient.php';
 require_once dirname(__FILE__) . '/../Psr/Log/NullLogger.php';
 require_once dirname(__FILE__) . '/../Psr/Log/LoggerInterface.php';
 
@@ -179,7 +179,7 @@ class AMIClient implements IClient
 	/**
 	 * Opens a tcp connection to AMI.
 	 *
-	 * @throws \PAMI\Client\Exception\ClientException
+	 * @throws \PHPAMI\Client\Exception\ClientException
 	 * @return void
 	 */
 	public function open()
@@ -360,7 +360,7 @@ class AMIClient implements IClient
 	 *
 	 * @param IncomingMessage $message Message sent by asterisk.
 	 *
-	 * @return \PAMI\Message\Response\ResponseMessage
+	 * @return \PHPAMI\Message\Response\ResponseMessage
 	 */
 	protected function findResponse(IncomingMessage $message)
 	{
@@ -377,7 +377,7 @@ class AMIClient implements IClient
 	/**
 	 * Dispatchs the incoming message to a handler.
 	 *
-	 * @param \PAMI\Message\IncomingMessage $message Message to dispatch.
+	 * @param \PHPAMI\Message\IncomingMessage $message Message to dispatch.
 	 *
 	 * @return void
 	 */
@@ -412,7 +412,7 @@ class AMIClient implements IClient
 	 *
 	 * @param string $msg Raw string.
 	 *
-	 * @return \PAMI\Message\Response\ResponseMessage
+	 * @return \PHPAMI\Message\Response\ResponseMessage
 	 */
 	private function messageToResponse($msg)
 	{
@@ -434,7 +434,7 @@ class AMIClient implements IClient
 	 *
 	 * @param string $msg Raw string.
 	 *
-	 * @return \PAMI\Message\Event\EventMessage
+	 * @return \PHPAMI\Message\Event\EventMessage
 	 */
 	private function messageToEvent($msg)
 	{
@@ -447,7 +447,7 @@ class AMIClient implements IClient
 	 *
 	 * @todo not suitable for multithreaded applications.
 	 *
-	 * @return \PAMI\Message\IncomingMessage
+	 * @return \PHPAMI\Message\IncomingMessage
 	 */
 	protected function getRelated(OutgoingMessage $message)
 	{
@@ -472,11 +472,11 @@ class AMIClient implements IClient
 	/**
 	 * Sends a message to AMI.
 	 *
-	 * @param \PAMI\Message\OutgoingMessage $message Message to send.
+	 * @param \PHPAMI\Message\OutgoingMessage $message Message to send.
 	 *
 	 * @see ElastixWatcher::send()
-	 * @throws \PAMI\Client\Exception\ClientException
-	 * @return \PAMI\Message\Response\ResponseMessage
+	 * @throws \PHPAMI\Client\Exception\ClientException
+	 * @return \PHPAMI\Message\Response\ResponseMessage
 	 */
 	public function send(OutgoingMessage $message)
 	{

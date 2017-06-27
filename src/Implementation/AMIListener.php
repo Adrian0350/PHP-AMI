@@ -27,17 +27,17 @@
  *
  */
 
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/EventMessage.php';
-require_once dirname(__FILE__) . '/../PAMI/Listener/IEventListener.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/DialEvent.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/DialBeginEvent.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/DialEndEvent.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/HangupEvent.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/NewstateEvent.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/NewextenEvent.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/NewchannelEvent.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/NewCalleridEvent.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/NewstateEvent.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/EventMessage.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Listener/IEventListener.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/DialEvent.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/DialBeginEvent.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/DialEndEvent.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/HangupEvent.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/NewstateEvent.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/NewextenEvent.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/NewchannelEvent.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/NewCalleridEvent.php';
+require_once dirname(__FILE__) . '/../PHPAMI/Message/Event/NewstateEvent.php';
 
 class AMIListener implements IEventListener
 {
