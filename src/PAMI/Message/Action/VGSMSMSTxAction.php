@@ -9,9 +9,9 @@
  * @package    Message
  * @subpackage Action
  * @author     Matías Barletta <mrb@lionix.com>
- * @license    http://marcelog.github.com/PAMI/ Apache License 2.0
+ * @license    http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
  * @version    SVN: $Id$
- * @link       http://marcelog.github.com/PAMI/
+ * @link       http://github.com/Adrian0350/PHP-AMI/
  *
  * Copyright 2011 Marcelo Gornstein <marcelog@gmail.com>
  *
@@ -41,7 +41,7 @@ namespace PAMI\Message\Action;
  * @package    Message
  * @subpackage Action
  * @author     Matías Barletta <mrb@lionix.com>
- * @license    http://marcelog.github.com/PAMI/ Apache License 2.0
+ * @license    http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
  * @link       http://www.lionix.com/
  */
 class VGSMSMSTxAction extends ActionMessage

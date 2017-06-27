@@ -8,9 +8,9 @@
  * @package    Message
  * @subpackage Event
  * @author     Marcelo Gornstein <marcelog@gmail.com>
- * @license    http://marcelog.github.com/PAMI/ Apache License 2.0
+ * @license    http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
  * @version    SVN: $Id$
- * @link       http://marcelog.github.com/PAMI/
+ * @link       http://github.com/Adrian0350/PHP-AMI/
  *
  * Copyright 2011 Marcelo Gornstein <marcelog@gmail.com>
  *
@@ -38,8 +38,8 @@ require_once dirname(__FILE__) . '/EventMessage.php';
  * @package    Message
  * @subpackage Event
  * @author     Marcelo Gornstein <marcelog@gmail.com>
- * @license    http://marcelog.github.com/PAMI/ Apache License 2.0
- * @link       http://marcelog.github.com/PAMI/
+ * @license    http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
+ * @link       http://github.com/Adrian0350/PHP-AMI/
  */
 class RTPSenderStatEvent extends EventMessage
 {

@@ -4,12 +4,13 @@
  *
  * PHP Version 5
  *
- * @category Pami
- * @package  Message
- * @author   Jaime Zúñiga <jaime.ziga@gmail.com>
- * @license  http://marcelog.github.com/PAMI/ Apache License 2.0
- * @version  SVN: $Id$
- * @link     http://marcelog.github.com/PAMI/
+ * @category   PHP-AMI
+ * @package    Client
+ * @subpackage Implementation
+ * @author     Jaime Zúñiga <jaime.ziga@gmail.com>
+ * @license    http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
+ * @version    SVN: $Id$
+ * @link       http://github.com/Adrian0350/PHP-AMI/
  *
  * Copyright 2011 Marcelo Gornstein <marcelog@gmail.com>
  *
@@ -27,30 +28,19 @@
  *
  */
 
-/**
- * A functional AMI Client.
- *
- * PHP Version 5
- *
- * @category Pami
- * @package  Message
- * @author   Marcelo Gornstein <marcelog@gmail.com>
- * @license  http://marcelog.github.com/PAMI/ Apache License 2.0
- * @link     http://marcelog.github.com/PAMI/
- */
 declare(ticks=1);
 
-require_once dirname(__FILE__) . '/PAMI/Message/Message.php';
-require_once dirname(__FILE__) . '/PAMI/Message/OutgoingMessage.php';
-require_once dirname(__FILE__) . '/PAMI/Message/IncomingMessage.php';
-require_once dirname(__FILE__) . '/PAMI/Message/Action/LoginAction.php';
-require_once dirname(__FILE__) . '/PAMI/Message/Response/ResponseMessage.php';
-require_once dirname(__FILE__) . '/PAMI/Message/Event/Factory/Impl/EventFactoryImpl.php';
-require_once dirname(__FILE__) . '/PAMI/Listener/IEventListener.php';
-require_once dirname(__FILE__) . '/PAMI/Client/Exception/ClientException.php';
-require_once dirname(__FILE__) . '/PAMI/Client/IClient.php';
-require_once dirname(__FILE__) . '/Psr/Log/NullLogger.php';
-require_once dirname(__FILE__) . '/Psr/Log/LoggerInterface.php';
+require_once dirname(__FILE__) . '/../PAMI/Message/Message.php';
+require_once dirname(__FILE__) . '/../PAMI/Message/OutgoingMessage.php';
+require_once dirname(__FILE__) . '/../PAMI/Message/IncomingMessage.php';
+require_once dirname(__FILE__) . '/../PAMI/Message/Action/LoginAction.php';
+require_once dirname(__FILE__) . '/../PAMI/Message/Response/ResponseMessage.php';
+require_once dirname(__FILE__) . '/../PAMI/Message/Event/Factory/Impl/EventFactoryImpl.php';
+require_once dirname(__FILE__) . '/../PAMI/Listener/IEventListener.php';
+require_once dirname(__FILE__) . '/../PAMI/Client/Exception/ClientException.php';
+require_once dirname(__FILE__) . '/../PAMI/Client/IClient.php';
+require_once dirname(__FILE__) . '/../Psr/Log/NullLogger.php';
+require_once dirname(__FILE__) . '/../Psr/Log/LoggerInterface.php';
 
 /**
  * TCP Client implementation for AMI.
@@ -59,10 +49,10 @@ require_once dirname(__FILE__) . '/Psr/Log/LoggerInterface.php';
  *
  * @category   Pami
  * @package    Client
- * @subpackage Impl
- * @author	   Adrián Zúñiga <jaime.ziga@gmail.com>
- * @license	   http://marcelog.github.com/PAMI/ Apache License 2.0
- * @link       http://marcelog.github.com/PAMI/
+ * @subpackage Implementation
+ * @author     Adrián Zúñiga <jaime.ziga@gmail.com>
+ * @license	   http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
+ * @link       http://github.com/Adrian0350/PHP-AMI/
  */
 class AMIClient implements IClient
 {

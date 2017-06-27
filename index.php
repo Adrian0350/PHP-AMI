@@ -1,7 +1,7 @@
 <?php
 
-require_once dirname(__FILE__) . '/src/AMIListener.php';
-require_once dirname(__FILE__) . '/src/AMIClient.php';
+require_once dirname(__FILE__) . '/src/Implementation/AMIListener.php';
+require_once dirname(__FILE__) . '/src/Implementation/AMIClient.php';
 
 // Configure as required.
 $options = array(
