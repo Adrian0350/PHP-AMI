@@ -5,7 +5,6 @@
 	"keywords": ["Asterisk", "AMI", "Elastix"],
 	"homepage": "https://github.com/Adrian0350/PHP-AMI",
 	"license": "Apache 2.0",
-	"minimum-stability": "v1.0",
 	"authors": [
 		{
 			"name": "Marcelo Gornstein",
@@ -18,7 +17,17 @@
 		}
 	],
 	"repositories": [
-		"https://github.com/Adrian0350/PHP-AMI"
+		{
+			"type": "package",
+			"package": {
+				"name": "adrian0350/php-ami",
+				"version": "1.0.0",
+				"source": {
+					"url": "https://github.com/Adrian0350/PHP-AMI",
+					"type": "git" 
+				}
+			}
+		}
 	],
 	"require": {
 		"php": ">=5.1.6"
