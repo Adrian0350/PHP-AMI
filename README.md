@@ -1,9 +1,3 @@
-# PHP-AMI
-
-
-This version has been downgraded to use PHP version ^5.1.6 because I needed it
-for a project.
-
 # Introduction
 
 PHP-AMI stands for PHP Asterisk Management Interface.
