@@ -37,7 +37,6 @@ composer.json:
 For an in-depth tutorial: http://marcelog.github.com/articles/pami_introduction_tutorial_how_to_install.html
 
 ```php
-// Make sure you include the composer autoload.
 
 require_once dirname(__FILE__) . '/src/Implementation/AMIListener.php';
 require_once dirname(__FILE__) . '/src/Implementation/AMIClient.php';
