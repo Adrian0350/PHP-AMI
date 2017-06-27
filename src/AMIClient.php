@@ -1,17 +1,17 @@
 <?php
 declare(ticks=1);
 
-require_once dirname(__FILE__) . '/../PAMI/Message/Message.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/OutgoingMessage.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/IncomingMessage.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Action/LoginAction.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Response/ResponseMessage.php';
-require_once dirname(__FILE__) . '/../PAMI/Message/Event/Factory/Impl/EventFactoryImpl.php';
-require_once dirname(__FILE__) . '/../PAMI/Listener/IEventListener.php';
-require_once dirname(__FILE__) . '/../PAMI/Client/Exception/ClientException.php';
-require_once dirname(__FILE__) . '/../PAMI/Client/IClient.php';
-require_once dirname(__FILE__) . '/../Psr/Log/NullLogger.php';
-require_once dirname(__FILE__) . '/../Psr/Log/LoggerInterface.php';
+require_once dirname(__FILE__) . '/PAMI/Message/Message.php';
+require_once dirname(__FILE__) . '/PAMI/Message/OutgoingMessage.php';
+require_once dirname(__FILE__) . '/PAMI/Message/IncomingMessage.php';
+require_once dirname(__FILE__) . '/PAMI/Message/Action/LoginAction.php';
+require_once dirname(__FILE__) . '/PAMI/Message/Response/ResponseMessage.php';
+require_once dirname(__FILE__) . '/PAMI/Message/Event/Factory/Impl/EventFactoryImpl.php';
+require_once dirname(__FILE__) . '/PAMI/Listener/IEventListener.php';
+require_once dirname(__FILE__) . '/PAMI/Client/Exception/ClientException.php';
+require_once dirname(__FILE__) . '/PAMI/Client/IClient.php';
+require_once dirname(__FILE__) . '/Psr/Log/NullLogger.php';
+require_once dirname(__FILE__) . '/Psr/Log/LoggerInterface.php';
 
 /**
  * TCP Client implementation for AMI.
@@ -22,8 +22,8 @@ require_once dirname(__FILE__) . '/../Psr/Log/LoggerInterface.php';
  * @package    Client
  * @subpackage Impl
  * @author	   Adrián Zúñiga <jaime.ziga@gmail.com>
- * @license	   http://marcelog.github.com/../PAMI/ Apache License 2.0
- * @link       http://marcelog.github.com/../PAMI/
+ * @license	   http://marcelog.github.com/PAMI/ Apache License 2.0
+ * @link       http://marcelog.github.com/PAMI/
  */
 class AMIClient implements IClient
 {

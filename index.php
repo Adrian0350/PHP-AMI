@@ -5,7 +5,7 @@ require_once dirname(__FILE__) . '/src/AMIClient.php';
 
 // Configure as required.
 $options = array(
-	'host'            => '192.168.1.200',
+	'host'            => '192.168.1.250',
 	'username'        => 'root',
 	'password'        => 'toor',
 	'port'            => 5038,
@@ -14,7 +14,7 @@ $options = array(
 	'scheme'          => 'tcp://'
 );
 
-$AMIClient = new AMIClient($options);
+$AMIClient   = new AMIClient($options);
 $AMIListener = new AMIListener();
 
 $AMIClient->registerEventListener(array($AMIListener, 'handle'));
