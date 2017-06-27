@@ -7,7 +7,7 @@ require_once dirname(__FILE__) . '/EventMessage.php';
  *
  * PHP Version 5
  *
- * @category   Pami
+ * @category   PHPAMI
  * @package    Message
  * @subpackage Event
  * @author     Adrián Zúñiga <jaime.ziga@gmail.com>

@@ -4,9 +4,9 @@
  *
  * PHP Version 5
  *
- * @category Pami
+ * @category PHPAMI
  * @package  Client
- * @author   Marcelo Gornstein <marcelog@gmail.com>
+ * @author   Jaime Ziga <jaime.ziga@gmail.com>
  * @license  http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
  * @version  SVN: $Id$
  * @link     http://github.com/Adrian0350/PHP-AMI/
@@ -36,9 +36,9 @@ require_once dirname(__FILE__) . '/../../Psr/Log/NullLogger.php';
  *
  * PHP Version 5
  *
- * @category Pami
+ * @category PHPAMI
  * @package  Client
- * @author   Marcelo Gornstein <marcelog@gmail.com>
+ * @author   Jaime Ziga <jaime.ziga@gmail.com>
  * @license  http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
  * @version  SVN: $Id$
  * @link     http://github.com/Adrian0350/PHP-AMI/

@@ -4,7 +4,7 @@
  *
  * PHP Version 5
  *
- * @category   Pami
+ * @category   PHPAMI
  * @package    Message
  * @subpackage Event
  * @author     Jacob Kiers <jacob@alphacomm.nl>
@@ -34,7 +34,7 @@ require_once dirname(__FILE__) . '/EventMessage.php';
  *
  * PHP Version 5
  *
- * @category   Pami
+ * @category   PHPAMI
  * @package    Message
  * @subpackage Event
  * @author     Jacob Kiers <jacob@alphacomm.nl>

@@ -4,7 +4,7 @@
  *
  * PHP Version 5
  *
- * @category   Pami
+ * @category   PHPAMI
  * @package    Message
  * @subpackage Action
  * @author     Matt Styles <mstyleshk@gmail.com>
@@ -34,7 +34,7 @@ namespace PHPAMI\Message\Action;
  *
  * PHP Version 5
  *
- * @category   Pami
+ * @category   PHPAMI
  * @package    Message
  * @subpackage Action
  * @author     Matt Styles <mstyleshk@gmail.com>

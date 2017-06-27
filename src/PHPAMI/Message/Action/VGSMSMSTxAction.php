@@ -5,7 +5,7 @@
  *
  * PHP Version 5
  *
- * @category   Pami
+ * @category   PHPAMI
  * @package    Message
  * @subpackage Action
  * @author     Matías Barletta <mrb@lionix.com>
@@ -37,7 +37,7 @@ namespace PHPAMI\Message\Action;
  *
  * PHP Version 5
  *
- * @category   Pami
+ * @category   PHPAMI
  * @package    Message
  * @subpackage Action
  * @author     Matías Barletta <mrb@lionix.com>

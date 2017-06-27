@@ -5,10 +5,10 @@
  *
  * PHP Version 5
  *
- * @category   Pami
+ * @category   PHPAMI
  * @package	Event
  * @subpackage Factory.Impl
- * @author	 Marcelo Gornstein <marcelog@gmail.com>
+ * @author	 Jaime Ziga <jaime.ziga@gmail.com>
  * @license	http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
  * @version	SVN: $Id$
  * @link	   http://github.com/Adrian0350/PHP-AMI/
@@ -44,10 +44,10 @@ function loadEventClass($className)
  *
  * PHP Version 5
  *
- * @category   Pami
+ * @category   PHPAMI
  * @package    Event
  * @subpackage Factory.Impl
- * @author     Marcelo Gornstein <marcelog@gmail.com>
+ * @author     Jaime Ziga <jaime.ziga@gmail.com>
  * @license    http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
  * @link       http://github.com/Adrian0350/PHP-AMI/
  */

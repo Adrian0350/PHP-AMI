@@ -4,9 +4,9 @@
  *
  * PHP Version 5
  *
- * @category Pami
+ * @category PHPAMI
  * @package  AsyncAgi
- * @author   Marcelo Gornstein <marcelog@gmail.com>
+ * @author   Jaime Ziga <jaime.ziga@gmail.com>
  * @license  http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
  * @link     http://github.com/Adrian0350/PHP-AMI/
  *
@@ -27,7 +27,7 @@
  */
 namespace PHPAMI\AsyncAgi;
 
-use PHPAMI\Client\IClient as PamiClient;
+use PHPAMI\Client\IClient as PHPAMIClient;
 use PAGI\Client\AbstractClient as PagiClient;
 use PHPAMI\Listener\IEventListener;
 use PHPAMI\Message\Event\EventMessage;
@@ -40,9 +40,9 @@ use Psr\Log\NullLogger;
  *
  * PHP Version 5
  *
- * @category Pami
+ * @category PHPAMI
  * @package  AsyncAgi
- * @author   Marcelo Gornstein <marcelog@gmail.com>
+ * @author   Jaime Ziga <jaime.ziga@gmail.com>
  * @license  http://github.com/Adrian0350/PHP-AMI/ Apache License 2.0
  * @link     http://github.com/Adrian0350/PHP-AMI/
  */
