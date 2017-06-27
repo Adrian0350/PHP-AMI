@@ -291,21 +291,6 @@ $pami->setLogger($logger);
 
 By default, the client will use the [NullLogger](http://www.php-fig.org/psr/psr-3/#1-4-helper-classes-and-interfaces).
 
-# Developers
-This project uses [phing](https://www.phing.info/). Current tasks include:
- * test: Runs [PHPUnit](https://phpunit.de/).
- * cs: Runs [CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
- * doc: Runs [PhpDocumentor](http://www.phpdoc.org/).
- * md: runs [PHPMD](http://phpmd.org/).
- * build: This is the default task, and will run all the other tasks.
-
-## Running a phing task
-To run a task, just do:
-
-```sh
-vendor/bin/phing build
-```
-
 ## Contributing
 To contribute:
  * Make sure you open a **concise** and **short** pull request.
