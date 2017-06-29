@@ -1,7 +1,7 @@
 # Introduction
 
 PHP-AMI stands for PHP Asterisk Management Interface.
-This is a version of Marcelog's [PAMI](https://github.com/marcelog/PAMI).
+This is a downgraded for PHP version ^5.1.6 of Marcelog's [PAMI](https://github.com/marcelog/PAMI).
 As its name suggests its just a
 set of php classes that will let you issue commands to an ami and/or receive
 events, using an observer-listener pattern.
