@@ -27,7 +27,7 @@
  * limitations under the License.
  *
  */
-namespace PHPAMI\Message\Action;
+
 
 /**
  * AGI action message.

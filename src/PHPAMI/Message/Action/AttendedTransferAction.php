@@ -27,7 +27,7 @@
  * limitations under the License.
  *
  */
-namespace PHPAMI\Message\Action;
+
 
 /**
  * Atxfer action message.
