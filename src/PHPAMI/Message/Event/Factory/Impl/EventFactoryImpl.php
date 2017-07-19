@@ -82,16 +82,21 @@ class EventFactoryImpl
 		$name      = implode($parts, '');
 		$className = "{$name}Event";
 
-		try
+		if (file_exists(dirname(__FILE__)."/../../$className.php"))
 		{
-			spl_autoload_register(loadEventClass($className), true, true);
-		}
-		catch (Exception $e)
-		{}
+			try
+			{
+				spl_autoload_register(loadEventClass($className), true, true);
 
-		if (class_exists($className, true))
-		{
-			return new $className($message);
+				if (class_exists($className, true))
+				{
+					return new $className($message);
+				}
+			}
+			catch (Exception $e)
+			{
+				return new UnknownEvent($message);
+			}
 		}
 
 		return new UnknownEvent($message);
