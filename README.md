@@ -1,7 +1,7 @@
 # Introduction
 
 PHP-AMI stands for PHP Asterisk Management Interface.
-This is a downgraded for PHP version ^5.1.6 of Marcelog's [PAMI](https://github.com/marcelog/PAMI).
+This is a downgraded for **PHP version ^5.1.6** of Marcelog's [PAMI](https://github.com/marcelog/PAMI).
 As its name suggests its just a
 set of PHP classes that will let you issue commands to an AMI and/or receive
 events, using an observer-listener pattern.
@@ -17,7 +17,7 @@ A port for erlang is available at: https://github.com/marcelog/erlami
  * [API](http://pami.readthedocs.org/en/latest/ApiIndex/)
  * [Complete PAGI/PAMI talk for the PHP Conference Argentina 2013](http://www.slideshare.net/mgornstein/phpconf-2013). Check the slide notes for the complete text :)
 
-# PHP Versions
+# PHP Version
 
 Note: PHP-AMI Requires PHP 5.1.6+. PHP versions 5.3.9 and 5.3.10 WILL NOT WORK due
 to a bug introduced in stream_get_line() in 5.3.9. Please use 5.3.11+ or up
@@ -296,10 +296,6 @@ To contribute:
  * Make sure you open a **concise** and **short** pull request.
  * Throw in any needed unit tests to accomodate the new code or the
  changes involved.
- * Run `phing` and make sure everything is ok before submitting the pull
- request (make phpmd and CodeSniffer happy, also make sure that phpDocumentor
- does not throw any warnings, since all our documentation is automatically
- generated).
  * Your code must comply with [PSR-2](http://www.php-fig.org/psr/psr-2/),
  CodeSniffer should take care of that.
 
