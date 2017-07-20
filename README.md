@@ -72,7 +72,7 @@ closure that will be evaluated before calling the callback. The callback will
 be called only if this predicate returns true:
 
 ```php
-require_once dirname(__FILE__) . '/src/PAMI/Message/Event/DialEvent.php';
+require_once dirname(__FILE__) . '/src/PHPAMI/Message/Event/DialEvent.php';
 
 $client->registerEventListener(
     array($listener, 'dispatchEvent'),
