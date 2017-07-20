@@ -86,7 +86,7 @@ $client->registerEventListener(
 
 Please see ```/index.php``` for a very basic example.
 
-## Have in mind it uses a higher PHP version)
+## Have in mind it uses a higher PHP version
 AsterTrace is a full application: https://github.com/marcelog/AsterTrace.
 
 Also, you might want to look at this article: http://marcelog.github.com/articles/php_asterisk_listener_example_using_pami_and_ding.html
