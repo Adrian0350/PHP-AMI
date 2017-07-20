@@ -55,7 +55,7 @@ $options = array(
 $AMIClient   = new AMIClient($options);
 $AMIListener = new AMIListener();
 
-// Registering a closure
+// Registering a closure **NOT AVAILABLE FOR THIS VERSION DUE TO PHP VERSION**
 $AMIClient->registerEventListener(function ($event) {
 });
 
@@ -84,13 +84,12 @@ $client->registerEventListener(
 
 # Example
 
-Please see docs/examples/quickstart/example.php for a very basic example.
+Please see ```/index.php``` for a very basic example.
 
+## Have in mind it uses a higher PHP version)
 AsterTrace is a full application: https://github.com/marcelog/AsterTrace.
 
 Also, you might want to look at this article: http://marcelog.github.com/articles/php_asterisk_listener_example_using_pami_and_ding.html
-
-For an example of using asynchronous AGI with PAMI, see docs/examples/asyncagi
 
 The [march edition](http://sdjournal.org/a-practical-introduction-to-functional-programming-with-php-sdj-issue-released/) of [Software Developer Journal](http://sdjournal.org/) features a complete article about writing telephony applications with PAMI and PAGI.
 
@@ -111,6 +110,7 @@ can still catch them. If you catch one of these, please report it!
 * Bridge
 * CEL
 * ChannelUpdate
+* ChannelReloadEvent
 * ConfbridgeStart
 * ConfbridgeEnd
 * ConfbridgeJoin
@@ -294,14 +294,11 @@ By default, the client will use the [NullLogger](http://www.php-fig.org/psr/psr-
 ## Contributing
 To contribute:
  * Make sure you open a **concise** and **short** pull request.
- * Throw in any needed unit tests to accomodate the new code or the
- changes involved.
- * Your code must comply with [PSR-2](http://www.php-fig.org/psr/psr-2/),
- CodeSniffer should take care of that.
 
 LICENSE
 =======
-Copyright 2016 Marcelo Gornstein <marcelog@gmail.com>
+Copyright 2016 Marcelo Gornstein <marcelog@gmail.com> (For orignal repo)
+Copyright 2017 Adrián Zúñiga <jaime.ziga@gmail.com> (For this repo only)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
