@@ -43,53 +43,14 @@ class AMIListener implements IEventListener
 {
 	public function handle(EventMessage $event)
 	{
-		return $this->dispatchEvent($event);
-
-		if ($event instanceof NewchannelEvent && $event->getChannelStateDesc() == 'Ring')
-		{
-			$this->dispatchIncomingCall($event);
-		}
 		if ($event instanceof DialEvent && $event->getSubEvent() == 'Begin')
 		{
-			$this->dispatchDial($event);
-		}
-		if ($event instanceof NewCalleridEvent)
-		{
-			$this->dispatchAnsweredCall($event);
-		}
-		if ($event instanceof DialEvent && $event->getSubEvent() == 'End')
-		{
-			$this->dispatchHangup($event);
+			$this->dispatchEvent($event);
 		}
 	}
 
 	public function dispatchEvent($event)
 	{
 		echo $event->getRawContent() . "\n\n\n\n";
-	}
-
-	public function dispatchIncomingCall($event)
-	{
-		echo "Incoming call from " . $event->getCallerIDNum() . " " . $event->getCallerIDName() ."\n\n";
-	}
-	public function dispatchAnsweredCall($event)
-	{
-		echo "Caller : " . $event->getCallerIDNum() . "\n\n";
-	}
-
-	public function dispatchDial($event)
-	{
-		echo $event->getCallerIDName() . " is calling " . $event->getDialstring() . "\n\n";
-	}
-	public function dispatchHangup($event)
-	{
-		if (!$event->getDialString())
-		{
-			echo $event->getRawContent();
-		}
-		else
-		{
-			echo $event->getDialString() . " hungup… \n\n";
-		}
 	}
 }
