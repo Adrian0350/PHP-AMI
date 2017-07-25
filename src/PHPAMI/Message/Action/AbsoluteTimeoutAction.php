@@ -28,6 +28,7 @@
  *
  */
 
+require_once dirname(__FILE__).'/ActionMessage.php';
 
 /**
  * AbsoluteTimeout action message.

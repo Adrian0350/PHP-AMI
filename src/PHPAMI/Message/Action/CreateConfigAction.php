@@ -1,4 +1,4 @@
-<?php
+require_once dirname(__FILE__) . '/ActionMessage.php';<?php
 /**
  * CreateConfig action message.
  *
@@ -27,7 +27,7 @@
  * limitations under the License.
  *
  */
-
+require_once dirname(__FILE__) . '/ActionMessage.php';
 
 /**
  * CreateConfig action message.

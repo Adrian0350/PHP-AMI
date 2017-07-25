@@ -28,7 +28,6 @@
  *
  */
 
-
 /**
  * Atxfer action message.
  *

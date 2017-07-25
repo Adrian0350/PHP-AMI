@@ -27,7 +27,7 @@
  * limitations under the License.
  *
  */
-
+require_once dirname(__FILE__) . '/ActionMessage.php';
 
 /**
  * Challenge action message.

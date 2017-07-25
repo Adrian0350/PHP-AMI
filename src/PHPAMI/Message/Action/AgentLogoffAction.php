@@ -28,7 +28,6 @@
  *
  */
 
-
 /**
  * AgentLogoff action message.
  *

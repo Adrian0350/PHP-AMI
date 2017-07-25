@@ -29,7 +29,7 @@
  *
  *
  */
-namespace PHPAMI\Message\Action;
+require_once dirname(__FILE__) . '/ActionMessage.php';
 
 /**
  * Not all methods were implemented. For reference please check

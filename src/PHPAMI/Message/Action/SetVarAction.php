@@ -27,7 +27,7 @@
  * limitations under the License.
  *
  */
-namespace PHPAMI\Message\Action;
+require_once dirname(__FILE__) . '/ActionMessage.php';
 
 /**
  * SetVar action message.

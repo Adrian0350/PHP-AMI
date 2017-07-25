@@ -27,7 +27,7 @@
  * limitations under the License.
  *
  */
-namespace PHPAMI\Message\Action;
+require_once dirname(__FILE__) . '/ActionMessage.php';
 
 /**
  * Queries for the status of a channel or all channels if none specified.

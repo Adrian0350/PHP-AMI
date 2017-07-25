@@ -28,7 +28,6 @@
  *
  */
 
-
 /**
  * AGI action message.
  *

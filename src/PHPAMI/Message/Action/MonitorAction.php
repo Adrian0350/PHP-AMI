@@ -31,7 +31,7 @@
  * limitations under the License.
  *
  */
-namespace PHPAMI\Message\Action;
+require_once dirname(__FILE__) . '/ActionMessage.php';
 
 /**
  * Monitor action message. Will always record with .wav format and mixing the
