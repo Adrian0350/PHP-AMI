@@ -55,7 +55,7 @@ $options = array(
 $AMIClient   = new AMIClient($options);
 $AMIListener = new AMIListener();
 
-// Registering a closure **NOT AVAILABLE FOR THIS VERSION DUE TO PHP VERSION**
+// Registering a closure ** NOT AVAILABLE FOR PHP VERSION 5.1.6 **
 $AMIClient->registerEventListener(function ($event) {
 });
 
