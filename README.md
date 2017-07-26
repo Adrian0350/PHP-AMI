@@ -15,7 +15,7 @@ A port for erlang is available at: https://github.com/marcelog/erlami
 # Resources
 
  * [API](http://pami.readthedocs.org/en/latest/ApiIndex/)
- * [Complete PAGI/PAMI talk for the PHP Conference Argentina 2013](http://www.slideshare.net/mgornstein/phpconf-2013). Check the slide notes for the complete text :)
+ * [Complete PAMI talk for the PHP Conference Argentina 2013](http://www.slideshare.net/mgornstein/phpconf-2013). Check the slide notes for the complete text :)
 
 # PHP Version
 
@@ -106,7 +106,6 @@ can still catch them. If you catch one of these, please report it!
 * Agentlogin
 * Agentlogoff
 * AGIExec
-* AsyncAGI
 * Bridge
 * CEL
 * ChannelUpdate
