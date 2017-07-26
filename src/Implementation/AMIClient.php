@@ -220,7 +220,7 @@ class AMIClient implements IClient
 		@stream_set_blocking($this->socket, 0);
 		$this->currentProcessingMessage = '';
 
-		$this->logger->log("Logged in successfully to AMI.\n-----------------------------------------------------\n");
+		$this->logger->log("\nLogged in successfully to AMI.\n");
 
 		$this->listen();
 	}
