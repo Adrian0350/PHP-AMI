@@ -198,7 +198,7 @@ class AMIClient implements IClient
 
 		if ($this->socket === false)
 		{
-			return $this->logger->log('Error connecting to AMI: ' . $error_message . "\n");
+			return $this->logger->log(PHP_EOL.'Error connecting to AMI: '.$error_message.PHP_EOL);
 		}
 
 		$msg = new LoginAction($this->user, $this->password, $this->eventMask);
@@ -207,20 +207,20 @@ class AMIClient implements IClient
 
 		if (strstr($asteriskId, 'Asterisk') === false)
 		{
-			return $this->logger->log('Unknown peer. Is this an AMI?: ' . $asteriskId . "\n");
+			return $this->logger->log(PHP_EOL.'Unknown peer. Is this an AMI?: '.$asteriskId.PHP_EOL);
 		}
 
 		$response = $this->send($msg);
 
 		if ($response && !$response->isSuccess())
 		{
-			return $this->logger->log('Could not connect: ' . $response->getMessage() . "\n");
+			return $this->logger->log(PHP_EOL.'Could not connect: '.$response->getMessage().PHP_EOL);
 		}
 
 		@stream_set_blocking($this->socket, 0);
 		$this->currentProcessingMessage = '';
 
-		$this->logger->log("\nLogged in successfully to AMI.\n");
+		$this->logger->log(PHP_EOL.'Logged in successfully to AMI.'.PHP_EOL);
 
 		$this->listen();
 	}
@@ -288,7 +288,7 @@ class AMIClient implements IClient
 
 		if ($read === false || @feof($this->socket))
 		{
-			$this->logger->log("Error reading... Opening.\n");
+			$this->logger->log(PHP_EOL.'Error reading... Opening.'.PHP_EOL);
 			$this->close();
 			$this->open();
 		}
@@ -320,7 +320,7 @@ class AMIClient implements IClient
 		foreach ($messages as $message)
 		{
 			$response = strpos($message, 'Response:');
-			$event = strpos($message, 'Event:');
+			$event    = strpos($message, 'Event:');
 
 			if (($response !== false) && (($response < $event) || $event === false))
 			{
@@ -329,7 +329,7 @@ class AMIClient implements IClient
 			}
 			elseif ($event !== false)
 			{
-				$event = $this->messageToEvent($message);
+				$event    = $this->messageToEvent($message);
 				$response = $this->findResponse($event);
 
 				if ($response === false || $response->isComplete())
@@ -345,8 +345,8 @@ class AMIClient implements IClient
 			{
 				// broken AMI.. sending a response with events without
 				// Event and ActionId
-				$event_message   = 'Event: ResponseEvent' . "\n";
-				$event_message  .= 'ActionId: ' . $this->lastActionId . "\n" . $message;
+				$event_message   = 'Event: ResponseEvent'.PHP_EOL;
+				$event_message  .= 'ActionId: '.$this->lastActionId.PHP_EOL.$message;
 				$event           = $this->messageToEvent($event_message);
 				$response        = $this->findResponse($event);
 
@@ -483,12 +483,12 @@ class AMIClient implements IClient
 		$messageToSend = $message->serialize();
 
 		$length = strlen($messageToSend);
-		$this->logger->log("\n---------------------- SENDING ----------------------\n $messageToSend");
+		$this->logger->log(PHP_EOL.'---------------------- SENDING ----------------------'.PHP_EOL.$messageToSend);
 		$this->lastActionId = $message->getActionId();
 
 		if (@fwrite($this->socket, $messageToSend) < $length)
 		{
-			return $this->logger->log('Could not send message...');
+			return $this->logger->log(PHP_EOL.'Could not send message...'.PHP_EOL);
 		}
 
 		$read = 0;
@@ -511,7 +511,7 @@ class AMIClient implements IClient
 			}
 		}
 
-		$this->logger->log('Read timeout... Resending.');
+		$this->logger->log(PHP_EOL.'Read timeout... Resending.'.PHP_EOL);
 		$this->send($message);
 	}
 
@@ -522,7 +522,7 @@ class AMIClient implements IClient
 	 */
 	public function close()
 	{
-		$this->logger->log("Closing connection to asterisk.\n");
+		$this->logger->log(PHP_EOL.'Closing connection to asterisk.'.PHP_EOL);
 		@stream_socket_shutdown($this->socket, STREAM_SHUT_RDWR);
 	}
 
