@@ -63,7 +63,7 @@ $AMIClient->registerEventListener(function ($event) {
 $AMIClient->registerEventListener(array($AMIListener, 'handle'));
 
 // Register an IEventListener:
-$client->registerEventListener($AMIListener);
+$AMIClient->registerEventListener($AMIListener);
 ```
 
 # Using Predicates
@@ -74,7 +74,7 @@ be called only if this predicate returns true:
 ```php
 require_once dirname(__FILE__) . '/src/PHPAMI/Message/Event/DialEvent.php';
 
-$client->registerEventListener(
+$AMIClient->registerEventListener(
     array($listener, 'dispatchEvent'),
     function ($event) {
         return $event instanceof DialEvent && $event->getSubEvent() == 'Begin';
