@@ -289,8 +289,10 @@ class AMIClient implements IClient
 		if ($read === false || @feof($this->socket))
 		{
 			$this->logger->log(PHP_EOL.'Error reading... Opening.'.PHP_EOL);
-			$this->close();
-			$this->open();
+			if ($this->close())
+			{
+				$this->open();
+			}
 		}
 
 		$this->currentProcessingMessage .= $read;
@@ -518,12 +520,27 @@ class AMIClient implements IClient
 	/**
 	 * Closes the connection to AMI.
 	 *
-	 * @return void
+	 * @return bool
 	 */
 	public function close()
 	{
-		$this->logger->log(PHP_EOL.'Closing connection to asterisk.'.PHP_EOL);
-		@stream_socket_shutdown($this->socket, STREAM_SHUT_RDWR);
+		try
+		{
+			// Try to close connection with and read out everything in input buffer.
+			socket_shutdown($this->socket, STREAM_SHUT_WR);
+			while(fgets($sock) !== false) { ; }
+
+			// Close stream definately.
+			$closed = fclose($this->socket);
+			$this->logger->log(PHP_EOL.'Closing connection to asterisk: '.$closed.PHP_EOL);
+		}
+		catch (Exception $e)
+		{
+			$this->logger->log(PHP_EOL.'Exception trying to close asterisk connection: '.$e->getMessage());
+			$closed = false;
+		}
+
+		return $closed;
 	}
 
 	/**
