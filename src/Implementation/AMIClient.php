@@ -532,7 +532,7 @@ class AMIClient implements IClient
 
 			// Close stream definately.
 			$closed = fclose($this->socket);
-			$this->logger->log(PHP_EOL.'Closing connection to asterisk: '.$closed.PHP_EOL);
+			$this->logger->log(PHP_EOL.'Closing connection to asterisk '.$closed.PHP_EOL);
 		}
 		catch (Exception $e)
 		{
