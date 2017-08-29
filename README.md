@@ -56,8 +56,7 @@ $AMIClient   = new AMIClient($options);
 $AMIListener = new AMIListener();
 
 // Registering a closure ** NOT AVAILABLE FOR PHP VERSION 5.1.6 **
-$AMIClient->registerEventListener(function ($event) {
-});
+$AMIClient->registerEventListener(function($event){});
 
 // Register a specific method of an object for event listening
 $AMIClient->registerEventListener(array($AMIListener, 'handle'));
@@ -91,7 +90,7 @@ AsterTrace is a full application: https://github.com/marcelog/AsterTrace.
 
 Also, you might want to look at this article: http://marcelog.github.com/articles/php_asterisk_listener_example_using_pami_and_ding.html
 
-The [march edition](http://sdjournal.org/a-practical-introduction-to-functional-programming-with-php-sdj-issue-released/) of [Software Developer Journal](http://sdjournal.org/) features a complete article about writing telephony applications with PAMI and PAGI.
+The [march edition](http://sdjournal.org/a-practical-introduction-to-functional-programming-with-php-sdj-issue-released/) of [Software Developer Journal](http://sdjournal.org/) features a complete article about writing telephony applications with [PAMI](https://github.com/MARCELOG/pami) and PAGI.
 
 # Currently Supported Events
 
@@ -285,7 +284,7 @@ can still catch them. If you catch one of these, please report it!
 
 You can optionally set a [PSR-3](http://www.php-fig.org/psr/psr-3/) compatible logger:
 ```php
-$pami->setLogger($logger);
+$AMIClient->setLogger($logger);
 ```
 
 By default, the client will use the [NullLogger](http://www.php-fig.org/psr/psr-3/#1-4-helper-classes-and-interfaces).
